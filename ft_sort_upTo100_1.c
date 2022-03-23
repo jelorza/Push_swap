@@ -29,7 +29,6 @@ void	ft_short_upto100(t_stacks_struct *str_stacks)
 		ft_calc_movs_a(str_stacks);
 		ft_calc_movs_b(str_stacks);
 		ft_sum_movs(str_stacks);
-		pos_mov = ft_calc_min_movs(str_stacks);
 		ft_eject_movs(str_stacks);
 		ft_pb(str_stacks);
 		ft_free_stacks(str_stacks);

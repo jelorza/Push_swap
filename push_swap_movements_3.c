@@ -41,7 +41,7 @@ void	ft_rra(t_stacks_struct *str_stacks)
 {
 	int		c;
 	int		i;
-	char	*stack_c;
+	int		*stack_c;
 
 	stack_c = malloc(sizeof(int) * str_stacks->argca);
 	i = 0;

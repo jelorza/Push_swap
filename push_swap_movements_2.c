@@ -94,7 +94,7 @@ void	ft_rrb(t_stacks_struct *str_stacks)
 {
 	int		c;
 	int		i;
-	char	*stack_c;
+	int		*stack_c;
 
 	stack_c = malloc(sizeof(int) * str_stacks->argcb);
 	i = 0;
