@@ -6,7 +6,7 @@
 /*   By: jelorza- <jelorza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:07:21 by jelorza-          #+#    #+#             */
-/*   Updated: 2022/03/22 16:07:28 by jelorza-         ###   ########.fr       */
+/*   Updated: 2022/03/24 17:20:45 by jelorza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,13 @@ int	ft_check_repeated_numbs(int *num, int argc)
 		j = i + 1;
 	}
 	return (0);
+}
+
+void	ft_check_int_limits(int sign, long int res)
+{
+	if (res * sign > 2147483647 || res * sign < -2147483648)
+	{
+		write (1, "Error\n", 6);
+		exit (0);
+	}
 }

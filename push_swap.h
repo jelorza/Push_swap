@@ -6,7 +6,7 @@
 /*   By: jelorza- <jelorza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 10:29:05 by jelorza-          #+#    #+#             */
-/*   Updated: 2022/03/22 15:57:23 by jelorza-         ###   ########.fr       */
+/*   Updated: 2022/03/24 17:18:58 by jelorza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct stacks {
 
 int		ft_check_char(int argc, char **argv); // checamos si no hay caracteres
 int		ft_atoi(char *str);
+void	ft_check_int_limits(int sign, long int res);
 int		*ft_clean_argvs( int argc, char **argv, int *num_counter);
 int		*ft_clean_argvs_with_quotations(char *str, int *num_counter);
 int		ft_count_nbrs(char *str);
@@ -66,10 +67,8 @@ void	ft_short_upto3(t_stacks_struct *str_stack);
 void	ft_stack_a_in0_ismin(t_stacks_struct *str_stack);
 int		ft_check_ifis_shorted(t_stacks_struct *str_stacks);
 void	ft_short_upto5(t_stacks_struct *str_stacks);
-void	ft_between_max_min(t_stacks_struct *str_stacks);
-void	ft_fit_from_b1(t_stacks_struct *str_stacks);
+void	ft_finish(t_stacks_struct *str_stacks);
 int		ft_min(t_stacks_struct *str_stacks);
-void	ft_fit_from_b2(t_stacks_struct *str_stacks);
 int		ft_ra_mov(t_stacks_struct *str_stacks, int i);
 int		ft_rra_mov(t_stacks_struct *str_stacks, int i, int argca);
 int		ft_find_min(int *stack, int argc);

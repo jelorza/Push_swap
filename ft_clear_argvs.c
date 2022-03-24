@@ -6,7 +6,7 @@
 /*   By: jelorza- <jelorza-@student.42urduli>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:06:57 by jelorza-          #+#    #+#             */
-/*   Updated: 2022/03/22 16:07:13 by jelorza-         ###   ########.fr       */
+/*   Updated: 2022/03/24 17:20:03 by jelorza-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int	ft_atoi(char *str)
 {
 	int					sign;
 	size_t				i;
-	long int	res;
+	long int			res;
 
 	sign = 1;
 	i = 0;
@@ -125,10 +125,6 @@ int	ft_atoi(char *str)
 		res = (str[i] - '0') + (res * 10);
 		i++;
 	}
-	if (res * sign > 2147483647 || res * sign < -2147483648)
-	{
-		write (1, "Error\n", 6);
-		exit (0);
-	}
+	ft_check_int_limits(sign, res);
 	return (res * sign);
 }
