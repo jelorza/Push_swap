@@ -107,7 +107,7 @@ int	ft_atoi(char *str)
 {
 	int					sign;
 	size_t				i;
-	unsigned long int	res;
+	long int	res;
 
 	sign = 1;
 	i = 0;
@@ -125,9 +125,10 @@ int	ft_atoi(char *str)
 		res = (str[i] - '0') + (res * 10);
 		i++;
 	}
-	if (res > 9223372036854775807 && sign == -1)
-		return (0);
-	else if (res > 9223372036854775807 && sign == 1)
-		return (-1);
+	if (res * sign > 2147483647 || res * sign < -2147483648)
+	{
+		write (1, "Error\n", 6);
+		exit (0);
+	}
 	return (res * sign);
 }

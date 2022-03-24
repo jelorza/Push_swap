@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 		if (ft_check_repeated_numbs(stack_a, argc))
 		{
 			free(stack_a);
-			write (1, "Error", 15);
+			write (1, "Error\n", 6);
 			return (0);
 		}
 		ft_push_swap(stack_a, &argc);
